@@ -79,7 +79,7 @@ public class MainActivity extends Activity {
 
             if (manuf[0] == 1) {
 
-                double press = (double)(ByteBuffer.wrap(manuf, 1, 4).order(ByteOrder.LITTLE_ENDIAN).getInt()) / 100000.0;
+                double press = (double)(ByteBuffer.wrap(manuf, 1, 4).order(ByteOrder.LITTLE_ENDIAN).getInt()) / 1000.0;
                 double temp = (double)(ByteBuffer.wrap(manuf, 5, 2).order(ByteOrder.LITTLE_ENDIAN).getShort()) / 100.0;
                 double humi = (double)(ByteBuffer.wrap(manuf, 7, 2).order(ByteOrder.LITTLE_ENDIAN).getShort()) / 100.0;
 
